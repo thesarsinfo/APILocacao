@@ -1,41 +1,25 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj": {}
+    "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj": {
+    "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
+        "projectUniqueName": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj",
         "projectName": "APILocacao",
-        "projectPath": "C:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
-        "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\obj\\",
-=======
-    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
-        "projectName": "APILocacao",
-        "projectPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
-        "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\",
->>>>>>> 0485685aa590133de8151dfa2fc156a50de5da4a
+        "projectPath": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj",
+        "packagesPath": "C:\\Users\\LEAE\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\LEAE\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +38,15 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.17, )"
             },
