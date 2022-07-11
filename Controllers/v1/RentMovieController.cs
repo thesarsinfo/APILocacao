@@ -23,20 +23,22 @@ namespace APILocacao.Controllers
             _context = context;
             _logger = logger;
         }
-
+        [HttpPost]
         public async Task<IActionResult> AddRent([FromBody] RentMovieDTO rentMovieDTO)
         {
             if (ModelState.IsValid)
             {
-                var movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == rentMovieDTO.MovieId);
+                var movie = await _context.Movies
+                                .Where(mov => mov.Status == false)
+                                .FirstOrDefaultAsync(mov => mov.Id == rentMovieDTO.MovieId);
                 if(movie.Amount > 0)
                 {
-                    movie.Amount = -1;
+                    movie.Amount -= 1;
                     _context.Movies.Update(movie);
                     _context.SaveChanges();
                     RentMovie rentMovie = new RentMovie();
                     var clients = await _context.RentMovies.Include(cli => cli.Clients).FirstOrDefaultAsync(clie => clie.Clients.CPF == rentMovieDTO.ClientId);
-                    var movies = await _context.RentMovies.Include(mov => mov).FirstOrDefaultAsync(movi => movi.Movies.Id == rentMovieDTO.MovieId);
+                    var movies = await _context.RentMovies.Include(mov => mov).FirstOrDefaultAsync(mov => mov.Movies.Id == rentMovieDTO.MovieId);
                     rentMovie.Clients =clients.Clients;
                     rentMovie.Movies = movies.Movies;                
                     rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
@@ -48,7 +50,7 @@ namespace APILocacao.Controllers
                 else
                 {
                     Response.StatusCode = 200;
-                    return new ObjectResult("The movie has be rented.");
+                    return new ObjectResult("This movie is rented, please choose another movie");
                 }                
             }
             else
@@ -57,22 +59,36 @@ namespace APILocacao.Controllers
                 return new ObjectResult("O modelo enviado não está correto, verifique o dados enviados");
             }            
         }  
+        [HttpPut]
         public async Task<IActionResult> MovieReturn([FromBody] ulong cpf)
         {
-  
-            var client = _context.RentMovies
+            RentMovie rentMovie = new();
+            var client = await _context.RentMovies
                         .Include(cli => cli.Clients)
                         .Include(mov => mov.Movies)
-                        .Where(clie => clie.Clients.CPF == cpf && clie.ReturnMovie == false);
+                        .Where(rent => rent.ReturnMovie == false)
+                        .FirstOrDefaultAsync(cli => cli.Clients.CPF == cpf);                        
             if (client == null)
             {
                 Response.StatusCode = 200;
-                return new ObjectResult("O cliente não tem nenhum filme alugado");
+                return new ObjectResult("The client has no one movie rented");
             }
-            client.Select(cli => cli.FinalDeliveryDate <= DateTime.Today);
-            
-            
-            return new ObjectResult("");
+            var today =  DateTime.Today;
+            int finalDeliveryWarning = (int) today.Subtract(client.FinalDeliveryDate).TotalDays;
+            if (finalDeliveryWarning > 0)
+            {
+                _logger.LogInformation("Cliente has a movie delayed " + client.Movies.Name);
+                client.TotalRent = client.TotalRent * finalDeliveryWarning;                
+            }
+            client.ReturnMovie = true;
+            _context.Update(client);
+            await _context.SaveChangesAsync();  
+           
+            Movie movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == client.Movies.Id);          
+            movie.Amount += 1;
+            _context.Update(movie);
+            await _context.SaveChangesAsync();
+            return new ObjectResult("The has return with successfull");
         }
 
     }
