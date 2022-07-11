@@ -1563,11 +1563,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj",
+      "projectUniqueName": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Projeto\\APILocacao\\APILocacao.csproj",
       "projectName": "APILocacao",
-      "projectPath": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj",
+      "projectPath": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Projeto\\APILocacao\\APILocacao.csproj",
       "packagesPath": "C:\\Users\\LEAE\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\obj\\",
+      "outputPath": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Projeto\\APILocacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LEAE\\AppData\\Roaming\\NuGet\\NuGet.Config"

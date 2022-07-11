@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dIMic4ugcc0BNMf/LoNdsP/CCXbsGgYfqcpCgUkUr+DsUX2smXJ1zUCJBuy3NQpHyuedhEs0PvKSKo6Ha/iT7w==",
+  "dgSpecHash": "bvk9M3Fg2QmcHc5DT9YiNaLGgRbEkTztp7UQqdyreCF490BAXyANEolCgPVbIiD/unGKtyE635sz+GdrUbUhtQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\LEAE\\Downloads\\APILocacao-developer (1)\\APILocacao-developer\\APILocacao.csproj",
+  "projectFilePath": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Projeto\\APILocacao\\APILocacao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LEAE\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\LEAE\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
