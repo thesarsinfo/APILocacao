@@ -28,11 +28,12 @@ namespace APILocacao.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 RentMovie rentMovie = new RentMovie();
                 var clients = await _context.RentMovies.Include(cli => cli.Clients).FirstOrDefaultAsync(clie => clie.Clients.CPF == rentMovieDTO.ClientId);
-                //var movies = await _context.RentMovies.Include(mov => mov.Movies).FirstOrDefaultAsync(movi => movi.Movies.Id == rentMovieDTO.MovieId);
+                var movies = await _context.RentMovies.Include(mov => mov).FirstOrDefaultAsync(movi => movi.Movies.Id == rentMovieDTO.MovieId);
                 rentMovie.Clients =clients.Clients;
-                //rentMovie.Movies = movies.Movies;                
+                rentMovie.Movies = movies.Movies;                
                 rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
                 rentMovie.TotalRent = rentMovieDTO.TotalRent;
                 Response.StatusCode = 200;

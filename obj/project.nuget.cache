@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qXkB5A8v87wq61DRiLhCqBCg0/SzZWoXebTM60icVaZ6WFmqKk540VWAAe7p1UXbdqhdw/3HfFK5REU1L6Qabg==",
+  "dgSpecHash": "5/eubQGUJrXHUvszrPNx8DizovgaWnH6sDJnzwa0YIADP97PExdCQv1HHg1ETKBMAu4G12SHlKPBPrMY8nv4uQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+  "projectFilePath": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TESV\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TESV\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
@@ -41,5 +41,12 @@
     "C:\\Users\\TESV\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.0\\system.identitymodel.tokens.jwt.6.12.0.nupkg.sha512",
     "C:\\Users\\TESV\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
