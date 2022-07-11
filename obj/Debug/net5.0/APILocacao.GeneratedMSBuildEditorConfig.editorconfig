@@ -7,4 +7,8 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = APILocacao
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\
+=======
+build_property.ProjectDir = C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\
+>>>>>>> 0485685aa590133de8151dfa2fc156a50de5da4a

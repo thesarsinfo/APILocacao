@@ -1308,11 +1308,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
       "projectName": "APILocacao",
       "projectPath": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
       "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
       "outputPath": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+      "projectName": "APILocacao",
+      "projectPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+      "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\",
+>>>>>>> 0485685aa590133de8151dfa2fc156a50de5da4a
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
