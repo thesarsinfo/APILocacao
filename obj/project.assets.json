@@ -1303,24 +1303,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LEAE\\.nuget\\packages\\": {}
+    "C:\\Users\\Alberto\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\APILocacao.csproj",
+      "projectUniqueName": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
       "projectName": "APILocacao",
-      "projectPath": "c:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\APILocacao.csproj",
-      "packagesPath": "C:\\Users\\LEAE\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\obj\\",
+      "projectPath": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
+      "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LEAE\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
