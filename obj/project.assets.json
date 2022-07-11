@@ -1303,24 +1303,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TESV\\.nuget\\packages\\": {}
+    "C:\\Users\\Alberto\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+      "projectUniqueName": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
       "projectName": "APILocacao",
-      "projectPath": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
-      "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\",
+      "projectPath": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\APILocacao.csproj",
+      "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Alberto\\Desktop\\ProjetoGFT\\APILocacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1387,13 +1389,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
