@@ -10,8 +10,7 @@ namespace APILocacao.Models
         public int Id { get; set; }
         public Client Clients { get; set; }    
         //public Movie Movies { get; set; }    
-        public DateTime FinalDeliveryDate { get; set; }
-        public bool Rent { get; set; }
+        public DateTime FinalDeliveryDate { get; set; }        
         public decimal TotalRent { get; set; }
         
     }

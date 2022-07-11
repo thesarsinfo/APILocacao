@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\APILocacao.csproj": {}
+    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\APILocacao.csproj": {
+    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\APILocacao.csproj",
+        "projectUniqueName": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
         "projectName": "APILocacao",
-        "projectPath": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\APILocacao.csproj",
-        "packagesPath": "C:\\Users\\LEAE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LEAE\\OneDrive - GFT Technologies SE\\Desktop\\Nova pasta (3)\\APILocacao\\obj\\",
+        "projectPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+        "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LEAE\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
