@@ -12,6 +12,7 @@ namespace APILocacao.Models
         public Movie Movies { get; set; }    
         public DateTime FinalDeliveryDate { get; set; }        
         public decimal TotalRent { get; set; }
+        public bool ReturnMovie { get; set; }
         
     }
 }
