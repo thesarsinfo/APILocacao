@@ -15,8 +15,8 @@ namespace APILocacao.Controllers
     [Route("api/v1/[controller]")]
     public class ClientController : ControllerBase
     {
-         private readonly IClientRepository _repository;
-         private readonly IMapper _mapper;
+        private readonly IClientRepository _repository;
+        private readonly IMapper _mapper;
 
         public ClientController(IClientRepository repository, IMapper mapper)
         {
@@ -38,11 +38,11 @@ namespace APILocacao.Controllers
             }
             catch (System.Exception)
             {
-                
-            Response.StatusCode = 400;
-            return new ObjectResult ("Not found client");
+
+                Response.StatusCode = 400;
+                return new ObjectResult("Not found client");
             }
-        
+
         }
 
 
@@ -51,7 +51,7 @@ namespace APILocacao.Controllers
         public async Task<IActionResult> GetById(ulong id)
         {
             try
-            {   
+            {
                 var clients = await _repository.GetByIdClientAsync(id);
 
 
@@ -66,11 +66,11 @@ namespace APILocacao.Controllers
             }
             catch (System.Exception)
             {
-                
-            Response.StatusCode = 400;
-            return new ObjectResult ("Not found client");
+
+                Response.StatusCode = 400;
+                return new ObjectResult("Not found client");
             }
-        
+
         }
 
         [HttpPost]
@@ -84,28 +84,28 @@ namespace APILocacao.Controllers
             _repository.Add(clientAdd);
 
             return await _repository.SaveChangesAsync()
-            ? Ok ("Client Created")
-            : BadRequest("Error  created client");
+            ? Ok("Client Created")
+            : BadRequest("Error created client");
         }
 
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(ulong id , ClientupdateDTO client)
+        public async Task<IActionResult> Put(ulong id, ClientupdateDTO client)
         {
             if (id <= 0) return BadRequest("client not informed");
             var clientdatabase = await _repository.GetByIdClientAsync(id);
 
-           var clietntUpdate =  _mapper.Map(client,clientdatabase);
+            var clietntUpdate = _mapper.Map(client, clientdatabase);
 
-           _repository.Update(clietntUpdate);
+            _repository.Update(clietntUpdate);
 
-                return await _repository.SaveChangesAsync()
-            ? Ok ("Updated client")
-            : BadRequest("Error updating client");
+            return await _repository.SaveChangesAsync()
+        ? Ok("Updated client")
+        : BadRequest("Error updating client");
         }
 
 
-     
+
     }
 }

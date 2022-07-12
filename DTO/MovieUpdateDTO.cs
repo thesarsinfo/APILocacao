@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace APILocacao.DTO
 {
-    public class MovieDTO
+    public class MovieUpdateDTO
     {
-
         [Required(ErrorMessage = "Campo Nome requerido")]
         [StringLength(80)]
         public string Name { get; set; }
@@ -18,6 +17,5 @@ namespace APILocacao.DTO
         public string Synopsis { get; set; }
         [Required(ErrorMessage = "Campo Quantidade requerido")]
         public int Amount { get; set; }
-        public bool Status { get; set; }
     }
 }

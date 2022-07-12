@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {}
+    "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {
+    "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
+        "projectUniqueName": "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
         "projectName": "APILocacao",
-        "projectPath": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
+        "projectPath": "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
         "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\obj\\",
+        "outputPath": "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,11 +1,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using APILocacao.Data;
 using APILocacao.DTO;
 using APILocacao.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,10 +18,12 @@ namespace APILocacao.Controllers
     public class MoviesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public MoviesController(ApplicationDbContext context)
+        public MoviesController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -52,7 +54,7 @@ namespace APILocacao.Controllers
                 Movie movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
                 if (movie is null)
                 {
-                    return NotFound($"Filme com o Id: {id} não encontrado...");
+                    return NotFound($"Movie with Id: {id} not found...");
                 }
                 return Ok(movie);
             }
@@ -65,37 +67,32 @@ namespace APILocacao.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] MovieDTO MovieDTO)
+        public async Task<IActionResult> Post([FromBody] MovieDTO MovieDTO)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    Movie movie = new Movie();
+                    Movie movie = _mapper.Map<Movie>(MovieDTO);
 
-                    movie.Name = MovieDTO.Name;
-                    movie.Director = MovieDTO.Director;
-                    movie.Synopsis = MovieDTO.Synopsis;
-                    movie.Amount = MovieDTO.Amount;
-
-                    _context.Movies.Add(movie);
-                    _context.SaveChanges();
+                    await _context.Movies.AddAsync(movie);
+                    await _context.SaveChangesAsync();
 
                     Response.StatusCode = 201;
-                    return new ObjectResult("");
+                    return new ObjectResult("Movie successfully registered");
 
                 }
                 else
                 {
                     Response.StatusCode = 400;
-                    return new ObjectResult("Dados inválidos, verifique o dados enviados");
+                    return new ObjectResult("Invalid data, check the data sent");
                 }
 
             }
             catch (Exception)
             {
 
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema  ao tratar sua solicitação");
+                return StatusCode(StatusCodes.Status500InternalServerError, "There was a problem handling your request");
             }
 
 
@@ -103,13 +100,13 @@ namespace APILocacao.Controllers
 
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                Movie movie = _context.Movies.FirstOrDefault(movie => movie.Id == id);
+                Movie movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
                 movie.Status = false;
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return Ok();
             }
             catch (Exception)
@@ -121,14 +118,14 @@ namespace APILocacao.Controllers
         }
 
 
-        [HttpPatch]
-        public IActionResult Patch([FromBody] Movie Movie)
+        [HttpPatch("{id:int}")]
+        public async Task<IActionResult> Patch(int id, MovieUpdateDTO Movie)
         {
-            if (Movie.Id > 0)
+            if (id > 0)
             {
                 try
                 {
-                    var movie = _context.Movies.FirstOrDefault(movie => movie.Id == Movie.Id);
+                    var movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
                     if (movie != null)
                     {
 
@@ -137,26 +134,27 @@ namespace APILocacao.Controllers
                         movie.Synopsis = Movie.Synopsis ?? movie.Synopsis;
                         movie.Amount = Movie.Amount != 0 ? Movie.Amount : movie.Amount;
 
-                        _context.SaveChanges();
+
+                        await _context.SaveChangesAsync();
                         return Ok();
                     }
                     else
                     {
                         Response.StatusCode = 400;
-                        return new ObjectResult(new { msg = "Filme não encontrado" });
+                        return new ObjectResult(new { msg = "Movie not found" });
                     }
                 }
                 catch
                 {
                     Response.StatusCode = 400;
-                    return new ObjectResult(new { msg = "Filme não encontrado" });
+                    return new ObjectResult(new { msg = "Movie not found" });
                 }
             }
             else
             {
 
                 Response.StatusCode = 400;
-                return new ObjectResult(new { msg = "O id do filme é inválido" });
+                return new ObjectResult(new { msg = "Movie not found" });
             }
         }
 

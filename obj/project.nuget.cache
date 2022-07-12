@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bj/NVeWd1OX3HT8urO258SrWMOZYe+IyUaU3t7VAw8tLOOesVGn2jyPsZvFEJt2gxhsYcaWx07Oj6mJMyYBKQA==",
+  "dgSpecHash": "dnmecncpHo/Uj4YYSC+Lai2vFlmT37E5UHSD6C6rLdxdJS4TB3rdRC8+Qp7OQ5AM7Zqymsspqam/I9vI6O9fZA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
+  "projectFilePath": "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alberto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Alberto\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
