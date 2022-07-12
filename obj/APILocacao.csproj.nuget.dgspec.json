@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {}
   },
   "projects": {
@@ -15,11 +16,29 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
+        "projectName": "APILocacao",
+        "projectPath": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
+        "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> d6762dd1870c6b7acbf1405a520271556d19cf62
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
