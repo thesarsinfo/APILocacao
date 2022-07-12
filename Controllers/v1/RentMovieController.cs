@@ -62,8 +62,8 @@ namespace APILocacao.Controllers
                 return new ObjectResult("There was an error in the data submission model. Please correct the data");
             }           
         }  
-        [HttpPut]
-        public async Task<IActionResult> MovieReturn([FromBody] ulong cpf)
+        [HttpPut("{cpf}")]
+        public async Task<IActionResult> MovieReturn(ulong cpf)
         {
             RentMovie rentMovie = new();
             var client = await _context.RentMovies
@@ -93,6 +93,5 @@ namespace APILocacao.Controllers
             await _context.SaveChangesAsync();
             return new ObjectResult("The has return with successfull");
         }
-
     }
 }
