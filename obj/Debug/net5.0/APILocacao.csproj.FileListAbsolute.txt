@@ -187,3 +187,9 @@ C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debu
 C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\ref\APILocacao.dll
 C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.pdb
 C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.genruntimeconfig.cache
+C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
