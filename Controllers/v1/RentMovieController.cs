@@ -24,40 +24,43 @@ namespace APILocacao.Controllers
             _logger = logger;
         }
         [HttpPost]
-        public async Task<IActionResult> AddRent([FromBody] RentMovieDTO rentMovieDTO)
+        public async Task<IActionResult> AddRent(RentMovieDTO rentMovieDTO)
         {
             if (ModelState.IsValid)
             {
-                var movie = await _context.Movies
-                                .Where(mov => mov.Status == false)
-                                .FirstOrDefaultAsync(mov => mov.Id == rentMovieDTO.MovieId);
-                if(movie.Amount > 0)
+                var clientId = await _context.Clients.FirstOrDefaultAsync(cli => cli.CPF == rentMovieDTO.ClientId);
+                var movieId = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == rentMovieDTO.MovieId);
+
+                if (clientId == null || movieId == null)
                 {
-                    movie.Amount -= 1;
-                    _context.Movies.Update(movie);
-                    _context.SaveChanges();
-                    RentMovie rentMovie = new RentMovie();
-                    var clients = await _context.RentMovies.Include(cli => cli.Clients).FirstOrDefaultAsync(clie => clie.Clients.CPF == rentMovieDTO.ClientId);
-                    var movies = await _context.RentMovies.Include(mov => mov).FirstOrDefaultAsync(mov => mov.Movies.Id == rentMovieDTO.MovieId);
-                    rentMovie.Clients =clients.Clients;
-                    rentMovie.Movies = movies.Movies;                
-                    rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
-                    rentMovie.TotalRent = rentMovieDTO.TotalRent;
-                    rentMovie.ReturnMovie = false;
-                    Response.StatusCode = 201;
-                    return new ObjectResult("Rent add with successful");
+                    Response.StatusCode = 404;
+                    return new ObjectResult("The client or movie does not exist in the database");
                 } 
-                else
+                if (movieId.Amount <= 0)
                 {
                     Response.StatusCode = 200;
-                    return new ObjectResult("This movie is rented, please choose another movie");
-                }                
+                    return new ObjectResult("The chosen movie has already been rented ");
+                }              
+                                    
+                RentMovie rentMovie = new RentMovie();                    
+                rentMovie.Clients = clientId;
+                rentMovie.Movies = movieId;                
+                rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
+                rentMovie.TotalRent = rentMovieDTO.TotalRent;
+                rentMovie.ReturnMovie = false;
+                movieId.Amount -= 1;
+                _context.Movies.Update(movieId);   
+                await _context.SaveChangesAsync();                
+                _context.Add(rentMovie);
+                await _context.SaveChangesAsync();
+                Response.StatusCode = 201;
+                return new ObjectResult("The movie rental was successful");                      
             }
             else
             {
                 Response.StatusCode = 400;
-                return new ObjectResult("O modelo enviado não está correto, verifique o dados enviados");
-            }            
+                return new ObjectResult("There was an error in the data submission model. Please correct the data");
+            }           
         }  
         [HttpPut]
         public async Task<IActionResult> MovieReturn([FromBody] ulong cpf)

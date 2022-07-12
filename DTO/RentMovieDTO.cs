@@ -10,7 +10,8 @@ namespace APILocacao.DTO
     {
         [Required(ErrorMessage = "Campo Id requerido")]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Campo clientId requerido")]        
+        [Required(ErrorMessage = "Campo clientId requerido")]     
+        [Range(9999999999,100000000000,ErrorMessage = "Cpf Invalido")]
         public ulong ClientId { get; set; } 
         [Required(ErrorMessage = "Campo MovieId requerido")]
         public int MovieId { get; set; }   
