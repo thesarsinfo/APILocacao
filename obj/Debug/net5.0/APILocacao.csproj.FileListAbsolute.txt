@@ -43,6 +43,53 @@ C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Nova pasta (3)\APILocacao\o
 C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Nova pasta (3)\APILocacao\obj\Debug\net5.0\ref\APILocacao.dll
 C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Nova pasta (3)\APILocacao\obj\Debug\net5.0\APILocacao.pdb
 C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Nova pasta (3)\APILocacao\obj\Debug\net5.0\APILocacao.genruntimeconfig.cache
+<<<<<<< HEAD
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\appsettings.json
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\APILocacao.exe
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\APILocacao.deps.json
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\APILocacao.runtimeconfig.json
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\APILocacao.runtimeconfig.dev.json
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\APILocacao.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\ref\APILocacao.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\APILocacao.pdb
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.csproj.AssemblyReference.cache
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.AssemblyInfoInputs.cache
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.AssemblyInfo.cs
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\staticwebassets\APILocacao.StaticWebAssets.Manifest.cache
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\staticwebassets\APILocacao.StaticWebAssets.xml
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\scopedcss\bundle\APILocacao.styles.css
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.RazorTargetAssemblyInfo.cache
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.csproj.CopyComplete
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\ref\APILocacao.dll
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.pdb
+C:\Users\Alberto\Desktop\ProjetoGFT\APILocacao\obj\Debug\net5.0\APILocacao.genruntimeconfig.cache
+=======
 C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\appsettings.json
 C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\bin\Debug\net5.0\APILocacao.exe
@@ -88,3 +135,55 @@ C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\Locad
 C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\obj\Debug\net5.0\ref\APILocacao.dll
 C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\obj\Debug\net5.0\APILocacao.pdb
 C:\Users\TESV\OneDrive - GFT Technologies SE\Documents\Treinamento GFT\API\LocadoraApi\APILocacao\obj\Debug\net5.0\APILocacao.genruntimeconfig.cache
+>>>>>>> 0485685aa590133de8151dfa2fc156a50de5da4a
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\appsettings.json
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\APILocacao.exe
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\APILocacao.deps.json
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\APILocacao.runtimeconfig.json
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\APILocacao.runtimeconfig.dev.json
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\APILocacao.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\ref\APILocacao.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\APILocacao.pdb
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Humanizer.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.csproj.AssemblyReference.cache
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.AssemblyInfoInputs.cache
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.AssemblyInfo.cs
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.csproj.CoreCompileInputs.cache
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\staticwebassets\APILocacao.StaticWebAssets.Manifest.cache
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\staticwebassets\APILocacao.StaticWebAssets.xml
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\scopedcss\bundle\APILocacao.styles.css
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.RazorTargetAssemblyInfo.cache
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.csproj.CopyComplete
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\ref\APILocacao.dll
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.pdb
+C:\Users\LEAE\OneDrive - GFT Technologies SE\Desktop\Projeto\APILocacao\obj\Debug\net5.0\APILocacao.genruntimeconfig.cache

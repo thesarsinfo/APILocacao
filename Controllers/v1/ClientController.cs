@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using APILocacao.Data;
 using APILocacao.Models;
+using APILocacao.Repository.Interfaces;
+using AutoMapper;
+using System.Threading.Tasks;
+using APILocacao.Models.DTO;
 
 namespace APILocacao.Controllers
 {
@@ -11,56 +15,97 @@ namespace APILocacao.Controllers
     [Route("api/v1/[controller]")]
     public class ClientController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+         private readonly IClientRepository _repository;
+         private readonly IMapper _mapper;
 
-        public ClientController(ApplicationDbContext context)
+        public ClientController(IClientRepository repository, IMapper mapper)
         {
-            _context = context;
-
+            _repository = repository;
+            _mapper = mapper;
         }
-        [HttpGet("{id}")]
-        public IActionResult Get(ulong id)
-        {
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
             try
             {
-                var client = _context.Clients.First(p => p.CPF == id);
-                //Colocar HATEOS
-                return Ok(client);
+                var clients = await _repository.GetByIdClientAsync();
+
+
+                return clients.Any()
+                        ? Ok(clients)
+                        : BadRequest("Not found client");
             }
-            catch (Exception)
+            catch (System.Exception)
             {
-                Response.StatusCode = 404;
-                return new ObjectResult("");
+                
+            Response.StatusCode = 400;
+            return new ObjectResult ("Not found client");
             }
+        
         }
 
 
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(ulong id)
+        {
+            try
+            {   
+                var clients = await _repository.GetByIdClientAsync(id);
+
+
+
+                //mapeando o objeto
+                var clientReturn = _mapper.Map<ClientDetailsDTO>(clients);
+
+
+                return clientReturn != null
+                        ? Ok(clients)
+                        : BadRequest("Not found client");
+            }
+            catch (System.Exception)
+            {
+                
+            Response.StatusCode = 400;
+            return new ObjectResult ("Not found client");
+            }
+        
+        }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Client Tclient)
+
+        public async Task<IActionResult> Post(ClientAddDTO client)
         {
+            if (client == null) return BadRequest("Dados inválidos");
 
+            var clientAdd = _mapper.Map<Client>(client);
 
-            /*Validação*/
-        //Colocar HATEOS
+            _repository.Add(clientAdd);
 
-
-            Client c = new Client();
-            c.CPF = Tclient.CPF;
-            c.Name = Tclient.Name;
-            c.Lastname = Tclient.Lastname;
-            c.Telephone = Tclient.Telephone;
-            c.Address = Tclient.Address;
-            c.DateOfBirth = Tclient.DateOfBirth;
-            c.Status = Tclient.Status;
-            
-            _context.Clients.Add(c);
-            _context.SaveChanges();
-
-            Response.StatusCode = 201;
-            return new ObjectResult("");
-
+            return await _repository.SaveChangesAsync()
+            ? Ok ("Client Created")
+            : BadRequest("Error  created client");
         }
+
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(ulong id , ClientupdateDTO client)
+        {
+            if (id <= 0) return BadRequest("client not informed");
+            var clientdatabase = await _repository.GetByIdClientAsync(id);
+
+           var clietntUpdate =  _mapper.Map(client,clientdatabase);
+
+           _repository.Update(clietntUpdate);
+
+                return await _repository.SaveChangesAsync()
+            ? Ok ("Updated client")
+            : BadRequest("Error updating client");
+        }
+
+
+     
     }
 }
