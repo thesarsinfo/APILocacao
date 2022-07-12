@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj": {}
   },
   "projects": {
@@ -12,16 +13,27 @@
         "projectPath": "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\APILocacao.csproj",
         "packagesPath": "C:\\Users\\Alberto\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Alberto\\Desktop\\Gft\\APILocacao\\obj\\",
+=======
+    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+        "projectName": "APILocacao",
+        "projectPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\APILocacao.csproj",
+        "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi\\APILocacao\\obj\\",
+>>>>>>> be18ec42897077f672f11ea647b7a2ac9137c398
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

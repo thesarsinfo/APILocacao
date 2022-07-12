@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using APILocacao.Data;
 using APILocacao.DTO;
 using APILocacao.Models;
+using APILocacao.Repository;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -13,16 +15,22 @@ namespace APILocacao.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
+
     public class RentMovieController : ControllerBase
     {
+        private readonly BaseRepository _baseRepository;
         private readonly ApplicationDbContext _context;
         private readonly ILogger<RentMovieController> _logger;
+        private readonly  IMapper _mapper;
 
-        public RentMovieController(ApplicationDbContext context, ILogger<RentMovieController> logger)
+        public RentMovieController(BaseRepository baseRepository, ApplicationDbContext context, ILogger<RentMovieController> logger,IMapper mapper)
         {
+            _mapper = mapper;
+            _baseRepository = baseRepository;
             _context = context;
             _logger = logger;
         }
+
         [HttpPost]
         public async Task<IActionResult> AddRent(RentMovieDTO rentMovieDTO)
         {
@@ -42,17 +50,23 @@ namespace APILocacao.Controllers
                     return new ObjectResult("The chosen movie has already been rented ");
                 }              
                                     
-                RentMovie rentMovie = new RentMovie();                    
-                rentMovie.Clients = clientId;
-                rentMovie.Movies = movieId;                
-                rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
-                rentMovie.TotalRent = rentMovieDTO.TotalRent;
+                RentMovie rentMovie = new RentMovie();    
+                rentMovie = _mapper.Map<RentMovie>(rentMovieDTO);                
+                // rentMovie.Clients = clientId;
+                // rentMovie.Movies = movieId;                
+                // rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
+                // rentMovie.TotalRent = rentMovieDTO.TotalRent;
                 rentMovie.ReturnMovie = false;
                 movieId.Amount -= 1;
-                _context.Movies.Update(movieId);   
-                await _context.SaveChangesAsync();                
-                _context.Add(rentMovie);
-                await _context.SaveChangesAsync();
+                _baseRepository.Update(movieId);
+                await _baseRepository.SaveChangesAsync();
+                _baseRepository.Add(rentMovie);
+                await _baseRepository.SaveChangesAsync();
+
+                //_context.Movies.Update(movieId);   
+                //await _context.SaveChangesAsync();                
+                // _context.Add(rentMovie);
+                // await _context.SaveChangesAsync();
                 Response.StatusCode = 201;
                 return new ObjectResult("The movie rental was successful");                      
             }
@@ -62,8 +76,8 @@ namespace APILocacao.Controllers
                 return new ObjectResult("There was an error in the data submission model. Please correct the data");
             }           
         }  
-        [HttpPut]
-        public async Task<IActionResult> MovieReturn([FromBody] ulong cpf)
+        [HttpPut("{cpf}")]
+        public async Task<IActionResult> MovieReturn(ulong cpf)
         {
             RentMovie rentMovie = new();
             var client = await _context.RentMovies
@@ -93,6 +107,5 @@ namespace APILocacao.Controllers
             await _context.SaveChangesAsync();
             return new ObjectResult("The has return with successfull");
         }
-
     }
 }
