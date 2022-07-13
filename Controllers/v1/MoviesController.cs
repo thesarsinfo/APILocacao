@@ -1,10 +1,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using APILocacao.Data;
 using APILocacao.DTO;
 using APILocacao.Models;
+using APILocacao.Repository.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,12 +19,13 @@ namespace APILocacao.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IMovieRepository _repository;
 
-        public MoviesController(ApplicationDbContext context, IMapper mapper)
+
+        public MoviesController(IMovieRepository repository, IMapper mapper)
         {
-            _context = context;
+            _repository = repository;
             _mapper = mapper;
         }
 
@@ -31,12 +34,13 @@ namespace APILocacao.Controllers
         {
             try
             {
-                var movies = await _context.Movies.AsNoTracking().ToListAsync();
-                if (movies is null)
-                {
-                    return NotFound("Movie not found");
-                }
-                return movies;
+
+                var movies = await _repository.GetAllMoviesAsync();
+
+                return movies.Any()
+                     ? Ok()
+                     : BadRequest("Movie Not Found");
+
             }
             catch (Exception)
             {
@@ -51,12 +55,12 @@ namespace APILocacao.Controllers
         {
             try
             {
-                Movie movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
+                Movie movie = await _repository.GetByIdMovieAsync(id);
                 if (movie is null)
                 {
                     return NotFound($"Movie with Id: {id} not found...");
                 }
-                return Ok(movie);
+                return Ok();
             }
             catch (Exception)
             {
@@ -75,8 +79,8 @@ namespace APILocacao.Controllers
                 {
                     Movie movie = _mapper.Map<Movie>(MovieDTO);
 
-                    await _context.Movies.AddAsync(movie);
-                    await _context.SaveChangesAsync();
+                    _repository.Add(movie);
+                    await _repository.SaveChangesAsync();
 
                     Response.StatusCode = 201;
                     return new ObjectResult("Movie successfully registered");
@@ -104,9 +108,9 @@ namespace APILocacao.Controllers
         {
             try
             {
-                Movie movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
+                Movie movie = await _repository.DeleteMovieByIdAsync(id);
                 movie.Status = false;
-                await _context.SaveChangesAsync();
+                await _repository.SaveChangesAsync();
                 return Ok();
             }
             catch (Exception)
@@ -125,7 +129,7 @@ namespace APILocacao.Controllers
             {
                 try
                 {
-                    var movie = await _context.Movies.FirstOrDefaultAsync(movie => movie.Id == id);
+                    var movie = await _repository.UpdateMovieByIdAsync(id);
                     if (movie != null)
                     {
 
@@ -135,7 +139,7 @@ namespace APILocacao.Controllers
                         movie.Amount = Movie.Amount != 0 ? Movie.Amount : movie.Amount;
 
 
-                        await _context.SaveChangesAsync();
+                        await _repository.SaveChangesAsync();
                         return Ok();
                     }
                     else

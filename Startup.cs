@@ -31,11 +31,13 @@ namespace APILocacao
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddNewtonsoftJson(options =>{
-              options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-              });
-            services.AddScoped<IBaseRepository,BaseRepository>();
-            services.AddScoped<IClientRepository,ClientRepository>();
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+            services.AddScoped<IBaseRepository, BaseRepository>();
+            services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));

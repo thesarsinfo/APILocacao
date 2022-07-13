@@ -11,7 +11,7 @@ namespace APILocacao.Helpers
         {
 
             CreateMap<MovieDTO, Movie>();
-
+            CreateMap<MovieUpdateDTO, Movie>();
             CreateMap<MovieDTO, Movie>().ForAllMembers(opts => opts.Condition((srcMember) => srcMember != null));
 
         }

@@ -1,6 +1,6 @@
 
 using System.ComponentModel.DataAnnotations;
-
+using AutoMapper.Configuration.Annotations;
 
 namespace APILocacao.DTO
 {
@@ -17,5 +17,6 @@ namespace APILocacao.DTO
         public string Synopsis { get; set; }
         [Required(ErrorMessage = "Campo Quantidade requerido")]
         public int Amount { get; set; }
+
     }
 }
