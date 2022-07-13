@@ -17,6 +17,7 @@ namespace APILocacao.DTO
         public int MovieId { get; set; }   
         [Required(ErrorMessage = "Campo Data de revolução requerido")]
         public DateTime FinalDeliveryDate { get; set; }
+        public bool ReturnMovie { get; set; }
 
         [Required(ErrorMessage = "Campo total do aluguel requerido")]
         public decimal TotalRent { get; set; }

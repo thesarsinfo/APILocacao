@@ -12,7 +12,9 @@ namespace APILocacao.Helpers
     {
         public RentMovieProfile()
         {
-            CreateMap<RentMovie, RentMovieDTO>();
+            CreateMap<RentMovie, RentMovieDTO>()
+            .ForMember(dest => dest.ReturnMovie, opt => opt.Ignore());
+            
         }
         
     }
