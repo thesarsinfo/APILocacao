@@ -18,17 +18,18 @@ namespace APILocacao.Controllers
 
     public class RentMovieController : ControllerBase
     {
-        private readonly BaseRepository _baseRepository;
+        
         private readonly ApplicationDbContext _context;
         private readonly ILogger<RentMovieController> _logger;
         private readonly  IMapper _mapper;
+        private readonly RentMovieRepository _rentMovieRepository;
 
-        public RentMovieController(BaseRepository baseRepository, ApplicationDbContext context, ILogger<RentMovieController> logger,IMapper mapper)
+        public RentMovieController(ApplicationDbContext context, ILogger<RentMovieController> logger, IMapper mapper, RentMovieRepository rentMovieRepository)
         {
-            _mapper = mapper;
-            _baseRepository = baseRepository;
             _context = context;
             _logger = logger;
+            _mapper = mapper;
+            _rentMovieRepository = rentMovieRepository;
         }
 
         [HttpPost]
@@ -51,22 +52,19 @@ namespace APILocacao.Controllers
                 }              
                                     
                 RentMovie rentMovie = new RentMovie();    
-                rentMovie = _mapper.Map<RentMovie>(rentMovieDTO);                
-                // rentMovie.Clients = clientId;
-                // rentMovie.Movies = movieId;                
-                // rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
-                // rentMovie.TotalRent = rentMovieDTO.TotalRent;
+                // rentMovie = _mapper.Map<RentMovie>(rentMovieDTO);                
+                rentMovie.Clients = clientId;
+                rentMovie.Movies = movieId;                
+                rentMovie.FinalDeliveryDate = rentMovieDTO.FinalDeliveryDate;                
+                rentMovie.TotalRent = rentMovieDTO.TotalRent;
                 rentMovie.ReturnMovie = false;
                 movieId.Amount -= 1;
-                _baseRepository.Update(movieId);
-                await _baseRepository.SaveChangesAsync();
-                _baseRepository.Add(rentMovie);
-                await _baseRepository.SaveChangesAsync();
 
-                //_context.Movies.Update(movieId);   
-                //await _context.SaveChangesAsync();                
-                // _context.Add(rentMovie);
-                // await _context.SaveChangesAsync();
+                _context.Movies.Update(movieId);   
+                await _context.SaveChangesAsync(); 
+                var responseDatabase = await _rentMovieRepository.Add(rentMovie);         
+                //_context.Add(rentMovie);
+                //await _context.SaveChangesAsync();
                 Response.StatusCode = 201;
                 return new ObjectResult("The movie rental was successful");                      
             }
