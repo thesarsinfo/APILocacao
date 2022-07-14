@@ -6,6 +6,7 @@ using APILocacao.Data;
 using APILocacao.DTO;
 using APILocacao.Models;
 using APILocacao.Repository;
+using APILocacao.Repository.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -88,8 +89,8 @@ namespace APILocacao.Controllers
                 Response.StatusCode = 200;
                 return new ObjectResult("The client has no one movie rented");
             }
-            var today =  DateTime.Today;
-            int finalDeliveryWarning = (int) today.Subtract(client.FinalDeliveryDate).TotalDays;
+           
+            int finalDeliveryWarning = DateTime.Now.Subtract(client.FinalDeliveryDate).Days;
             if (finalDeliveryWarning > 0)
             {
                 _logger.LogInformation("Cliente has a movie delayed " + client.Movies.Name);
