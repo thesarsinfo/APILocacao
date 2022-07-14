@@ -23,9 +23,9 @@ namespace APILocacao.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ILogger<RentMovieController> _logger;
         private readonly  IMapper _mapper;
-        private readonly RentMovieRepository _rentMovieRepository;
+        private readonly IRentMovieRepository _rentMovieRepository;
 
-        public RentMovieController(ApplicationDbContext context, ILogger<RentMovieController> logger, IMapper mapper, RentMovieRepository rentMovieRepository)
+        public RentMovieController(ApplicationDbContext context, ILogger<RentMovieController> logger, IMapper mapper, IRentMovieRepository rentMovieRepository)
         {
             _context = context;
             _logger = logger;
