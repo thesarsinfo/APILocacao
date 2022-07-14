@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using APILocacao.Models;
 using APILocacao.Models.DTO;
 using AutoMapper;
@@ -12,9 +8,9 @@ namespace APILocacao.Helpers
     {
         public ClientProfile()
         {
-            CreateMap<Client, ClientDetailsDTO>();
+            CreateMap<Client, ClientDTO>();
 
-            CreateMap<ClientAddDTO, Client>();
+            CreateMap<ClientDTO, Client>();
 
             CreateMap<ClientupdateDTO, Client>()
             .ForAllMembers(opts => opts.Condition((srcMember) => srcMember != null));

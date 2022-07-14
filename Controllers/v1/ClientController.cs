@@ -1,13 +1,12 @@
 using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using APILocacao.Data;
 using APILocacao.Models;
 using APILocacao.Repository.Interfaces;
 using AutoMapper;
 using System.Threading.Tasks;
 using APILocacao.Models.DTO;
+using Microsoft.AspNetCore.Http;
 
 namespace APILocacao.Controllers
 {
@@ -25,22 +24,22 @@ namespace APILocacao.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<ActionResult> GetAll()
         {
             try
             {
-                var clients = await _repository.GetByIdClientAsync();
 
+                var clients = await _repository.GetAllByIdClientAsync();
 
                 return clients.Any()
-                        ? Ok(clients)
-                        : BadRequest("Not found client");
+                     ? Ok(clients)
+                     : BadRequest("Client Not Found");
+
             }
-            catch (System.Exception)
+            catch (Exception)
             {
 
-                Response.StatusCode = 400;
-                return new ObjectResult("Not found client");
+                return StatusCode(StatusCodes.Status500InternalServerError, "There was a problem handling your request");
             }
 
         }
@@ -55,7 +54,7 @@ namespace APILocacao.Controllers
 
 
                 //mapeando o objeto
-                var clientReturn = _mapper.Map<ClientDetailsDTO>(clients);
+                var clientReturn = _mapper.Map<ClientDTO>(clients);
 
 
                 return clientReturn != null
@@ -73,7 +72,7 @@ namespace APILocacao.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Post(ClientAddDTO client)
+        public async Task<IActionResult> Post(ClientDTO client)
         {
             if (client == null) return BadRequest("Dados inválidos");
 
@@ -103,7 +102,23 @@ namespace APILocacao.Controllers
         : BadRequest("Error updating client");
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(ulong id)
+        {
+            try
+            {
+                Client client = await _repository.DeleteClientByIdAsync(id);
+                client.Status = false;
+                await _repository.SaveChangesAsync();
+                return Ok();
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult("");
 
+            }
+        }
 
     }
 }

@@ -1,16 +1,13 @@
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using APILocacao.Data;
 using APILocacao.DTO;
 using APILocacao.Models;
 using APILocacao.Repository.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace APILocacao.Controllers
 {
@@ -30,7 +27,8 @@ namespace APILocacao.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> Get()
+        //public async Task<ActionResult<IEnumerable<Movie>>> Get() LUIZ ALTEROU PASSAMOS ERRONEAMENTE O PARAMETRO <IEnumerable<Movie>> QUANDO O MESMO JÀ FOI PASSADO REPOSITORY
+        public async Task<ActionResult> Get()
         {
             try
             {
@@ -38,7 +36,7 @@ namespace APILocacao.Controllers
                 var movies = await _repository.GetAllMoviesAsync();
 
                 return movies.Any()
-                     ? Ok()
+                     ? Ok(movies)
                      : BadRequest("Movie Not Found");
 
             }
@@ -60,7 +58,7 @@ namespace APILocacao.Controllers
                 {
                     return NotFound($"Movie with Id: {id} not found...");
                 }
-                return Ok();
+                return Ok(movie);
             }
             catch (Exception)
             {
@@ -111,7 +109,7 @@ namespace APILocacao.Controllers
                 Movie movie = await _repository.DeleteMovieByIdAsync(id);
                 movie.Status = false;
                 await _repository.SaveChangesAsync();
-                return Ok();
+                return Ok("Movie deleted successfully");
             }
             catch (Exception)
             {

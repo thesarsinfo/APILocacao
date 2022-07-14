@@ -7,10 +7,11 @@ using APILocacao.Repository.Interfaces;
 
 namespace APILocacao.Repository.Interfaces
 {
-    public interface IClientRepository:IBaseRepository
+    public interface IClientRepository : IBaseRepository
     {
-       Task <IEnumerable<ClientDTO>> GetByIdClientAsync();
+        Task<IEnumerable<Client>> GetAllByIdClientAsync();
 
-        Task <Client> GetByIdClientAsync(ulong id);
+        Task<Client> GetByIdClientAsync(ulong id);
+        Task<Client> DeleteClientByIdAsync(ulong id);
     }
 }

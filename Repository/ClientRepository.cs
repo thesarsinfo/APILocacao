@@ -18,11 +18,9 @@ namespace APILocacao.Repository
         {
             _context = context;
         }
-        public async Task <IEnumerable<ClientDTO>> GetByIdClientAsync()
+        public async Task <IEnumerable<Client>> GetAllByIdClientAsync()
         {
-            return await _context.Clients
-            .Select(x => new ClientDTO { CPF = x.CPF, Name = x.Name})
-            .ToListAsync();
+        return await _context.Clients.Where(value => value.Status == true).ToListAsync();
         
         }
 
@@ -30,6 +28,11 @@ namespace APILocacao.Repository
         {
             return await _context.Clients.Where(x => x.CPF == id).FirstOrDefaultAsync();
         }
-        
+        public async Task<Client> DeleteClientByIdAsync(ulong id)
+        {
+            return await _context.Clients.FirstOrDefaultAsync(client => client.CPF == id);
+
+        }
+
     }
 }
