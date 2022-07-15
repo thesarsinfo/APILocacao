@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "iNKqJkgFIGX9pEqfCy48CjXoGqIUaDUdyYwukZUe5WLLV1tC0GIuNwZRZN3rXw+VmWPO0inFIFg4w3Lix4DccA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\build.proj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TESV\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\TESV\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.0\\microsoft.netframework.referenceassemblies.net45.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

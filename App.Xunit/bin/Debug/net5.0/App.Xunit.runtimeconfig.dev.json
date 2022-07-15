@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\TESV\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\TESV\\.nuget\\packages"
+    ]
+  }
+}
