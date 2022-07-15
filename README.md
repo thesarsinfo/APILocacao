@@ -2,8 +2,6 @@
 
 <hr>
 
-<h1>Estudo API</h1>
-
 # API-Locadora
 
 ### Time
@@ -46,6 +44,7 @@ tabelas: Cliente, Filme e Locações.
 
 <h3> 🚩 Rotas da API</h3>
 
+<<<<<<< HEAD
 <img src="/Images/image1.jpg"> 
 
 <img src="/Images/image2.jpg">
@@ -53,6 +52,17 @@ tabelas: Cliente, Filme e Locações.
 <hr>
 <h3> ▶️ Executando o projeto</h3>
 ### Como instalar
+=======
+
+![Screenshot](Images/image1.jpg)
+![Screenshot](Images/image2.jpg)
+
+
+<hr>
+<h3> ▶️ Executando o projeto</h3>
+ 
+ ### Como instalar
+>>>>>>> 23325289f7ea69e9c34f53c23a999e5bd93e1315
 - Faça o clone do projeto <br>
 <code>https://git.gft.com/tesv/desafiomvc.git </code>
 - Para restaurar os pacotes use o <br>
@@ -65,12 +75,10 @@ tabelas: Cliente, Filme e Locações.
 <code>dotnet watch run </code>
 
 
-
+<hr>
 <h3> 💻Tecnologias</h3>
 
 - DOTNET CORE 5.0
 - ASP .NET CORE IDENTITY 5.0.12
 - ENTITY FRAMEWORK CORE 5.0.12
 - MySql
-
-

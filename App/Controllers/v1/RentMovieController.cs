@@ -58,12 +58,58 @@ namespace APILocacao.Controllers
                 Response.StatusCode = 400;
                 return new ObjectResult("There was an error in the data submission model. Please correct the data");
             }           
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+         }  
+        // [HttpPut("{cpf}")]
+        // public async Task<IActionResult> MovieReturn(ulong cpf)
+        // {
+        //     RentMovie rentMovie = new();
+        //     var client = await _context.RentMovies
+        //                  .Include(cli => cli.Clients)
+        //                  .Include(mov => mov.Movies)
+        //                  .Where(rent => rent.ReturnMovie == false)
+        //                  .FirstOrDefaultAsync(cli => cli.Clients.CPF == cpf);                        
+        //     if (client == null)
+        //     {
+        //         Response.StatusCode = 200;
+        //         return new ObjectResult("The client has no one movie rented");
+        //     }
+        //     var today =  DateTime.Today;
+        //     int finalDeliveryWarning = (int) today.Subtract(client.FinalDeliveryDate).TotalDays;
+        //     if (finalDeliveryWarning > 0)
+        //     {
+        //         _logger.LogInformation("Cliente has a movie delayed " + client.Movies.Name);
+        //         client.TotalRent = client.TotalRent * finalDeliveryWarning;                
+        //     }
+        //     client.ReturnMovie = true;
+        //     _context.Update(client);
+        //     await _context.SaveChangesAsync();  
+           
+        //     Movie movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == client.Movies.Id);          
+        //     movie.Amount += 1;
+        //     _context.Update(movie);
+        //     await _context.SaveChangesAsync();
+        //     return new ObjectResult("The has return with successfull");
+        // }
+=======
+>>>>>>> 23325289f7ea69e9c34f53c23a999e5bd93e1315
         }  
         [HttpPut("{cpf}")]
         public async Task<IActionResult> MovieReturn(ulong cpf)
         {
             RentMovie rentMovie = new();
+<<<<<<< HEAD
             var client = await _rentMovieRepository.GetRentMovie(cpf);         
+=======
+            var client = await _rentMovieRepository.GetRentMovie(cpf);
+            // var client = await _context.RentMovies
+            //              .Include(cli => cli.Clients)
+            //              .Include(mov => mov.Movies)
+            //              .Where(rent => rent.ReturnMovie == false)
+            //              .FirstOrDefaultAsync(cli => cli.Clients.CPF == cpf);                        
+>>>>>>> 23325289f7ea69e9c34f53c23a999e5bd93e1315
             if (client == null)
             {                
                 return Ok("The client has no one movie rented");
@@ -77,10 +123,21 @@ namespace APILocacao.Controllers
             client.ReturnMovie = true;
             await _rentMovieRepository.UpdateRentMovie(client);     
             var movie = await _rentMovieRepository.GetMovieAsync(client.Movies.Id);      
+<<<<<<< HEAD
             //business rule
             movie.Amount += 1;       
             await _rentMovieRepository.SetAmountMovie(movie);
             return Ok("The movie has return with successfull");
         }
+=======
+            movie.Amount += 1;
+            // Movie movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == client.Movies.Id);          
+            await _rentMovieRepository.SetAmountMovie(movie);
+            // _context.Update(movie);
+            // await _context.SaveChangesAsync();
+            return Ok("The movie has return with successfull");
+        }
+>>>>>>> 008ed2a1b8ae9b3f1ade4d9fcd74740b7b376e57
+>>>>>>> 23325289f7ea69e9c34f53c23a999e5bd93e1315
     }
 }

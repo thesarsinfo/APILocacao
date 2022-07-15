@@ -2,12 +2,21 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
       "C:\\Users\\TESV\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\TESV\\.nuget\\packages"
 =======
       "C:\\Users\\Alberto\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Alberto\\.nuget\\packages"
 >>>>>>> ccece151aec4f25a0d96c1828771de24902bc5b4
+=======
+      "C:\\Users\\Alberto\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Alberto\\.nuget\\packages"
+=======
+      "C:\\Users\\TESV\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\TESV\\.nuget\\packages"
+>>>>>>> 008ed2a1b8ae9b3f1ade4d9fcd74740b7b376e57
+>>>>>>> 23325289f7ea69e9c34f53c23a999e5bd93e1315
     ]
   }
 }
