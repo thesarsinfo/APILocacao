@@ -27,7 +27,7 @@ namespace APILocacao.Controllers
         }
 
         [HttpGet]
-        //public async Task<ActionResult<IEnumerable<Movie>>> Get() LUIZ ALTEROU PASSAMOS ERRONEAMENTE O PARAMETRO <IEnumerable<Movie>> QUANDO O MESMO JÀ FOI PASSADO REPOSITORY
+        
         public async Task<ActionResult> Get()
         {
             try
@@ -37,7 +37,7 @@ namespace APILocacao.Controllers
 
                 return movies.Any()
                      ? Ok(movies)
-                     : BadRequest("Movie Not Found");
+                     : BadRequest("Movies Not Found");
 
             }
             catch (Exception)
@@ -62,8 +62,8 @@ namespace APILocacao.Controllers
             }
             catch (Exception)
             {
-                Response.StatusCode = 404;
-                return new ObjectResult("");
+
+                return NotFound("id not exist");
 
             }
         }

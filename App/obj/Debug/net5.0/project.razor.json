@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "FilePath": "c:\\Users\\Alberto\\Desktop\\Gft-API\\APILocacao\\App\\APILocacao.csproj",
+=======
   "FilePath": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
+>>>>>>> 999c001f368bb7b801d523978982d54b53940e14
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",

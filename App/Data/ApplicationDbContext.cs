@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using APILocacao.Models;
+using System;
 
 namespace APILocacao.Data
 {
@@ -12,6 +13,11 @@ namespace APILocacao.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+        }
+
+        public DbContextOptions<ApplicationDbContext> UseMySql(string connectionString, ServerVersion serverVersion)
+        {
+            throw new NotImplementedException();
         }
     }
 }
