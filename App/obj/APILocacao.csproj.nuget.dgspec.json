@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj": {}
+    "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj": {
+    "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
+        "projectUniqueName": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
         "projectName": "APILocacao",
-        "projectPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
+        "projectPath": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
         "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\obj\\",
+        "outputPath": "c:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"

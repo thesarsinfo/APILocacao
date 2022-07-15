@@ -20,17 +20,14 @@ namespace App.Xunit
         [Fact]
         public async void GetMoviesById_WhenMovieDoesNotExist_ReturnNotFound() // esperando o retorno com Id inválido
         {
+            // Given
             var movieRepositoryStub = new Mock<IMovieRepository>();
             movieRepositoryStub.Setup(repo => repo.GetByIdMovieAsync(It.IsAny<int>())).ReturnsAsync((Movie)null);
             var mapperStub = new Mock<IMapper>();
             var controller = new MoviesController(movieRepositoryStub.Object, mapperStub.Object);
-
-            // Given
-            //  var controller = new MoviesController(_repository, _mapper);
             // When
             var result = await controller.GetById(20);
             // Then
-            // Assert.IsType<List<Movie>>(movie);
             Assert.IsType<NotFoundObjectResult>(result);
         }
 
