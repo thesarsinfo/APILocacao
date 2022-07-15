@@ -2,8 +2,6 @@
 
 <hr>
 
-<h1>Estudo API</h1>
-
 # API-Locadora
 
 ### Time
