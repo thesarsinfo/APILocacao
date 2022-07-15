@@ -46,9 +46,10 @@ tabelas: Cliente, Filme e Locações.
 
 <h3> 🚩 Rotas da API</h3>
 
-<img src="Images/image1.jpg"> 
 
-<img src="../APILocacao/Images/image2.jpg">
+![Screenshot](Images/image1.jpg)
+![Screenshot](Images/image2.jpg)
+
 
 <hr>
 <h3> ▶️ Executando o projeto</h3>
@@ -65,7 +66,7 @@ tabelas: Cliente, Filme e Locações.
 <code>dotnet watch run </code>
 
 
-
+<hr>
 <h3> 💻Tecnologias</h3>
 
 - DOTNET CORE 5.0
