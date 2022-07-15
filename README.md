@@ -44,8 +44,14 @@ tabelas: Cliente, Filme e Locações.
 
 <hr>
 
-<h3> ▶️ Executando o projeto</h3>
+<h3> 🚩 Rotas da API</h3>
 
+<img src="APILocacao/Images/image1.jpg"> 
+
+<img src="../APILocacao/Images/image2.jpg">
+
+<hr>
+<h3> ▶️ Executando o projeto</h3>
 ### Como instalar
 - Faça o clone do projeto <br>
 <code>https://git.gft.com/tesv/desafiomvc.git </code>
@@ -66,5 +72,3 @@ tabelas: Cliente, Filme e Locações.
 - ASP .NET CORE IDENTITY 5.0.12
 - ENTITY FRAMEWORK CORE 5.0.12
 - MySql
-
-

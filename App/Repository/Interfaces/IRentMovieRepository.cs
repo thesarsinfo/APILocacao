@@ -9,5 +9,8 @@ namespace APILocacao.Repository.Interfaces
         public Task<Client> GetClientAsync(ulong id); 
         public Task<int> SetAmountMovie(Movie entity); 
         public Task<int> AddRentMovie(RentMovie entity);
+        public Task<RentMovie> GetRentMovie(ulong CPF);
+        public Task<int> UpdateRentMovie(RentMovie entity);
+
     }
 }

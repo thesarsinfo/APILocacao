@@ -36,8 +36,7 @@ namespace APILocacao.Controllers
                //.Movies.FirstOrDefaultAsync(mov => mov.Id == rentMovieDTO.MovieId);
 
                 if (clientId == null || movieId == null)
-                {
-                   
+                {                   
                     return NotFound("The client or movie does not exist in the database");
                 } 
                 if (movieId.Amount <= 0)
@@ -68,6 +67,7 @@ namespace APILocacao.Controllers
                 Response.StatusCode = 400;
                 return new ObjectResult("There was an error in the data submission model. Please correct the data");
             }           
+<<<<<<< HEAD
          }  
         // [HttpPut("{cpf}")]
         // public async Task<IActionResult> MovieReturn(ulong cpf)
@@ -100,5 +100,38 @@ namespace APILocacao.Controllers
         //     await _context.SaveChangesAsync();
         //     return new ObjectResult("The has return with successfull");
         // }
+=======
+        }  
+        [HttpPut("{cpf}")]
+        public async Task<IActionResult> MovieReturn(ulong cpf)
+        {
+            RentMovie rentMovie = new();
+            var client = await _rentMovieRepository.GetRentMovie(cpf);
+            // var client = await _context.RentMovies
+            //              .Include(cli => cli.Clients)
+            //              .Include(mov => mov.Movies)
+            //              .Where(rent => rent.ReturnMovie == false)
+            //              .FirstOrDefaultAsync(cli => cli.Clients.CPF == cpf);                        
+            if (client == null)
+            {                
+                return Ok("The client has no one movie rented");
+            }
+            
+            var finalDeliveryWarning =(int)DateTime.Now.Subtract(client.FinalDeliveryDate).TotalDays;
+            if (finalDeliveryWarning > 0)
+            {                
+                client.TotalRent = client.TotalRent * finalDeliveryWarning;                
+            }
+            client.ReturnMovie = true;
+            await _rentMovieRepository.UpdateRentMovie(client);     
+            var movie = await _rentMovieRepository.GetMovieAsync(client.Movies.Id);      
+            movie.Amount += 1;
+            // Movie movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == client.Movies.Id);          
+            await _rentMovieRepository.SetAmountMovie(movie);
+            // _context.Update(movie);
+            // await _context.SaveChangesAsync();
+            return Ok("The movie has return with successfull");
+        }
+>>>>>>> 008ed2a1b8ae9b3f1ade4d9fcd74740b7b376e57
     }
 }
