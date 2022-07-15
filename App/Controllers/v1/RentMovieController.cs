@@ -99,6 +99,6 @@ namespace APILocacao.Controllers
         //     _context.Update(movie);
         //     await _context.SaveChangesAsync();
         //     return new ObjectResult("The has return with successfull");
-        }
+        //}
     }
 }
