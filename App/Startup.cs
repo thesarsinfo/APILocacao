@@ -30,7 +30,7 @@ namespace APILocacao
             services.AddScoped<IBaseRepository, BaseRepository>();
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
-             services.AddScoped<RentMovieRepository>();
+            services.AddScoped<IRentMovieRepository,RentMovieRepository>();
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
