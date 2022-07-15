@@ -68,37 +68,37 @@ namespace APILocacao.Controllers
                 Response.StatusCode = 400;
                 return new ObjectResult("There was an error in the data submission model. Please correct the data");
             }           
-        }  
-        [HttpPut("{cpf}")]
-        public async Task<IActionResult> MovieReturn(ulong cpf)
-        {
-            RentMovie rentMovie = new();
-            var client = await _context.RentMovies
-                         .Include(cli => cli.Clients)
-                         .Include(mov => mov.Movies)
-                         .Where(rent => rent.ReturnMovie == false)
-                         .FirstOrDefaultAsync(cli => cli.Clients.CPF == cpf);                        
-            if (client == null)
-            {
-                Response.StatusCode = 200;
-                return new ObjectResult("The client has no one movie rented");
-            }
-            var today =  DateTime.Today;
-            int finalDeliveryWarning = (int) today.Subtract(client.FinalDeliveryDate).TotalDays;
-            if (finalDeliveryWarning > 0)
-            {
-                _logger.LogInformation("Cliente has a movie delayed " + client.Movies.Name);
-                client.TotalRent = client.TotalRent * finalDeliveryWarning;                
-            }
-            client.ReturnMovie = true;
-            _context.Update(client);
-            await _context.SaveChangesAsync();  
+         }  
+        // [HttpPut("{cpf}")]
+        // public async Task<IActionResult> MovieReturn(ulong cpf)
+        // {
+        //     RentMovie rentMovie = new();
+        //     var client = await _context.RentMovies
+        //                  .Include(cli => cli.Clients)
+        //                  .Include(mov => mov.Movies)
+        //                  .Where(rent => rent.ReturnMovie == false)
+        //                  .FirstOrDefaultAsync(cli => cli.Clients.CPF == cpf);                        
+        //     if (client == null)
+        //     {
+        //         Response.StatusCode = 200;
+        //         return new ObjectResult("The client has no one movie rented");
+        //     }
+        //     var today =  DateTime.Today;
+        //     int finalDeliveryWarning = (int) today.Subtract(client.FinalDeliveryDate).TotalDays;
+        //     if (finalDeliveryWarning > 0)
+        //     {
+        //         _logger.LogInformation("Cliente has a movie delayed " + client.Movies.Name);
+        //         client.TotalRent = client.TotalRent * finalDeliveryWarning;                
+        //     }
+        //     client.ReturnMovie = true;
+        //     _context.Update(client);
+        //     await _context.SaveChangesAsync();  
            
-            Movie movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == client.Movies.Id);          
-            movie.Amount += 1;
-            _context.Update(movie);
-            await _context.SaveChangesAsync();
-            return new ObjectResult("The has return with successfull");
-        }
+        //     Movie movie = await _context.Movies.FirstOrDefaultAsync(mov => mov.Id == client.Movies.Id);          
+        //     movie.Amount += 1;
+        //     _context.Update(movie);
+        //     await _context.SaveChangesAsync();
+        //     return new ObjectResult("The has return with successfull");
+        // }
     }
 }

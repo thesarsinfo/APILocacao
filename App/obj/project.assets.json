@@ -1558,16 +1558,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Alberto\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\TESV\\.nuget\\packages\\": {}
->>>>>>> 999c001f368bb7b801d523978982d54b53940e14
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Alberto\\Desktop\\Gft-API\\APILocacao\\App\\APILocacao.csproj",
       "projectName": "APILocacao",
       "projectPath": "C:\\Users\\Alberto\\Desktop\\Gft-API\\APILocacao\\App\\APILocacao.csproj",
@@ -1577,16 +1572,6 @@
       "configFilePaths": [
         "C:\\Users\\Alberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
-      "projectName": "APILocacao",
-      "projectPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\APILocacao.csproj",
-      "packagesPath": "C:\\Users\\TESV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TESV\\OneDrive - GFT Technologies SE\\Documents\\Treinamento GFT\\API\\LocadoraApi2\\APILocacao\\App\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\TESV\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 999c001f368bb7b801d523978982d54b53940e14
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1667,5 +1652,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Alberto\\Desktop\\Gft-API\\APILocacao\\App\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
