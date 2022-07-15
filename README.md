@@ -46,7 +46,7 @@ tabelas: Cliente, Filme e Locações.
 
 <h3> 🚩 Rotas da API</h3>
 
-<img src="APILocacao/Images/image1.jpg"> 
+<img src="Images/image1.jpg"> 
 
 <img src="../APILocacao/Images/image2.jpg">
 
