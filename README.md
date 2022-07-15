@@ -51,7 +51,8 @@ tabelas: Cliente, Filme e Locações.
 
 <hr>
 <h3> ▶️ Executando o projeto</h3>
-### Como instalar
+ 
+ ### Como instalar
 - Faça o clone do projeto <br>
 <code>https://git.gft.com/tesv/desafiomvc.git </code>
 - Para restaurar os pacotes use o <br>
