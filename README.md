@@ -44,8 +44,14 @@ tabelas: Cliente, Filme e Locações.
 
 <hr>
 
-<h3> ▶️ Executando o projeto</h3>
+<h3> 🚩 Rotas da API</h3>
 
+<img src="/Images/image1.jpg"> 
+
+<img src="/Images/image2.jpg">
+
+<hr>
+<h3> ▶️ Executando o projeto</h3>
 ### Como instalar
 - Faça o clone do projeto <br>
 <code>https://git.gft.com/tesv/desafiomvc.git </code>
